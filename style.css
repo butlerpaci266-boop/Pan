@@ -1,0 +1,441 @@
+/* ==================== GLOBAL STYLES ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==================== HEADER ==================== */
+
+header {
+    background: linear-gradient(135deg, #00d4ff 0%, #0084ff 100%);
+    color: #0f0f1e;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 212, 255, 0.3);
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ==================== NAVBAR ==================== */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #00d4ff;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    background: #1a1a2e;
+    color: #00d4ff;
+    border: 2px solid #00d4ff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #00d4ff;
+    color: #0f0f1e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 212, 255, 0.4);
+}
+
+.nav-btn.active {
+    background: #00d4ff;
+    color: #0f0f1e;
+}
+
+/* ==================== CONTAINER ==================== */
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ==================== SECTIONS ==================== */
+
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+/* ==================== HOME SECTION ==================== */
+
+.welcome-box {
+    background: rgba(0, 212, 255, 0.1);
+    border: 2px solid #00d4ff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-box h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00d4ff;
+}
+
+.welcome-box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.home-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.option-card {
+    background: #1a1a2e;
+    border: 2px solid #00d4ff;
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 212, 255, 0.3);
+    background: rgba(0, 212, 255, 0.05);
+}
+
+.option-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #00d4ff;
+}
+
+.option-card p {
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* ==================== BUTTONS ==================== */
+
+.btn, .play-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0084ff 100%);
+    color: #0f0f1e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover, .play-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 212, 255, 0.4);
+}
+
+.btn:active, .play-btn:active {
+    transform: translateY(0);
+}
+
+/* ==================== GAMES GRID ==================== */
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.game-card {
+    background: #1a1a2e;
+    border: 2px solid #00d4ff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 212, 255, 0.3);
+    background: rgba(0, 212, 255, 0.05);
+    border-color: #ff00ff;
+}
+
+.game-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #00d4ff;
+}
+
+.game-card p {
+    margin-bottom: 20px;
+    opacity: 0.8;
+    min-height: 40px;
+}
+
+.play-btn {
+    width: 100%;
+}
+
+/* ==================== GAMES DIRECTORY ==================== */
+
+.category {
+    margin-bottom: 40px;
+    background: rgba(0, 212, 255, 0.05);
+    border: 2px solid #00d4ff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.category h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+.game-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.game-link {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%);
+    color: #00d4ff;
+    text-decoration: none;
+    border: 2px solid #00d4ff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+}
+
+.game-link:hover {
+    background: linear-gradient(135deg, #00d4ff 0%, #0084ff 100%);
+    color: #0f0f1e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+}
+
+/* ==================== GAME CONTAINER (MODAL) ==================== */
+
+.game-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.game-container.hidden {
+    display: none;
+}
+
+.game-modal {
+    background: #0f0f1e;
+    border: 3px solid #00d4ff;
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.close-btn:hover {
+    background: #ff3333;
+    transform: scale(1.1);
+}
+
+#game-content {
+    text-align: center;
+    color: #e0e0e0;
+}
+
+#game-content canvas {
+    border: 2px solid #00d4ff;
+    border-radius: 8px;
+    background: #000;
+    margin: 20px auto;
+    display: block;
+}
+
+/* ==================== FOOTER ==================== */
+
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 2px solid #00d4ff;
+    padding: 30px;
+    text-align: center;
+    color: #a0a0a0;
+    margin-top: 60px;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .nav-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .games-grid,
+    .game-links {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .welcome-box {
+        padding: 20px;
+    }
+
+    .home-options {
+        grid-template-columns: 1fr;
+    }
+
+    .game-modal {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .game-link {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        margin: 20px auto;
+    }
+
+    .games-grid,
+    .game-links {
+        grid-template-columns: 1fr;
+    }
+
+    .category {
+        padding: 15px;
+    }
+
+    .nav-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* ==================== ANIMATIONS ==================== */
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.game-card:active {
+    animation: pulse 0.5s ease-in-out;
+}
